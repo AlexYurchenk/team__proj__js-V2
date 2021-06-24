@@ -17,7 +17,7 @@
                 <li class="nav__item nav__item--current home-js">
                     <a href="#">Home</a>
                 </li>
-                <li class="nav__item js-nav__item">
+                <li class="nav__item js-nav__item library-js">
                     <a href="#">my library</a>
                 </li>
 
@@ -42,20 +42,21 @@
                         name="query"
                         class="header__input js-header__input"
                         type="text"
-                        placeholder="Поиск фильмов"/>
+                        placeholder="Поиск фильмов"
+                        autocomplete="off"/>
 
-                    <!-- <label for="name" class="header__input-label">Поиск фильмов</label> -->
+                    <label for="name" class="header__input-label">Поиск фильмов</label>
 
                     <button type="submit" class="search-btn">
                         <svg class="input__icon__svg" width="12" height="12">
                             <use href="./img/sprite.svg#search"></use>
                         </svg>
-                    </button>
-                    </form>
-
+                    </button>  
+                    
                     <p class="notification">
                             Search result not successful. Enter the correct movie name and try again
                     </p>
+            </form>                 
 
 
         <div class="header__button">
