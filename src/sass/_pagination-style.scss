@@ -7,11 +7,12 @@
     margin-right: auto;
     margin-left: auto;
     width: 374px;
-    height: 40px;
+   
 
     @media screen and (max-width: 767px) {
-      width: 280px;
-      height: 40px;
+      width: 200px;
+
+      margin-top: 40px;
       margin-right: auto;
       margin-left: auto;
         
@@ -27,10 +28,11 @@
 
 .button-list__pgn {
     height: 40px;
+    width: 100%;
 }
 
 .button-list__page {
-    padding: 0;
+    
     background-color: transparent;
 } 
 
