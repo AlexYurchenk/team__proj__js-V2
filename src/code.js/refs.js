@@ -45,7 +45,8 @@ const refs = {
    inputRef: document.querySelector('.header__input'),
    btnSrchRef: document.querySelector('.search-btn'),
    svgRef: document.querySelector('.input__icon__svg'),
-
+  // кнопки пагинации
+   paginationButtons: document.querySelector('.main__button-list'),
 }
 
 export default refs;
