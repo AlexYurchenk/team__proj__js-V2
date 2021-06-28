@@ -30,6 +30,7 @@ function fetchtrend(filmId) {
     
     })
       .then(r => {
+        
         renderMovies(r)
         })
 }

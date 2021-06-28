@@ -44,7 +44,13 @@ const refs = {
    headerForm: document.querySelector('.header__search__form'), 
    inputRef: document.querySelector('.header__input'),
    btnSrchRef: document.querySelector('.search-btn'),
-   svgRef: document.querySelector('.input__icon__svg'),
+  svgRef: document.querySelector('.input__icon__svg'),
+   
+  //  ссылки для футера
+   modal: document.querySelector('#modal'),
+   footerBtnCls: document.querySelector('.footer__btn'),
+  footerCrossCls: document.querySelector('.button__styles--close'),
+   
   // кнопки пагинации
    paginationButtons: document.querySelector('.main__button-list'),
 }
