@@ -10,7 +10,7 @@ refs.trendContainer.addEventListener('click', (e) => {
       return
     }
     const filmId = e.target.id;
-    fetchtrend(filmId)
+  fetchtrend(filmId)
 })
 
 
@@ -29,7 +29,7 @@ function fetchtrend(filmId) {
         }
     
     })
-    .then(r => {
+      .then(r => {
         renderMovies(r)
         })
 }
@@ -55,14 +55,47 @@ function renderMovies(r){
     const addQueue = new addMoviesToCollection({
         selector: '[data-name="add__queue"]',
     });
+  // попытка изменять текс кнопок
+  // function changeWatchedButton() {
+  //   const watchedList = localStorage.getItem('watched')
+    
+  //   if (watchedList === null || [] || !watchedList.includes(JSON.stringify(r.id))) {
+  //     refs.btn__watched.textContent = 'add to watched'
+  //     refs.btn__watched.classList.remove('button-is__active')
+  //   }
+  //   if (watchedList.includes(JSON.stringify(r.id))) {
+  //     refs.btn__watched.classList.add('button-is__active')
+  //     console.log(watchedList.includes(JSON.stringify(r.id)))
+  //     refs.btn__watched.textContent = 'remove from watched'
+  //   }
+  //   console.log('watched', refs.btn__watched)
+  // }
 
-    addWatched.refs.button.addEventListener('click', e => {
-        addWatched.addMovies('watched', r.id)
-    })
+  // function changeQueueButton() {
+  //   const queueList = localStorage.getItem('queue')
 
-    addQueue.refs.button.addEventListener('click', e => {
-        addQueue.addMovies('queue', r.id)
-    })
+  //   if (queueList === null || [] || !queueList.includes(JSON.stringify(r.id))) {
+  //     refs.btn__queue.textContent = 'add to queue'
+  //     refs.btn__queue.classList.remove('button-is__active')
+  //   }
+  //   if (queueList.includes(JSON.stringify(r.id))) {
+  //     console.log(queueList.includes(JSON.stringify(r.id)))
+  //     refs.btn__queue.classList.add('button-is__active')
+  //     refs.btn__queue.textContent = 'remove from queue'
+  //   }
+  //   console.log('queue', refs.btn__queue)
+  // }
+  
+  // changeWatchedButton()
+  // changeQueueButton()
+  
+  addWatched.refs.button.addEventListener('click', e => {
+      addWatched.addMovies('watched', r.id)
+  })
+
+  addQueue.refs.button.addEventListener('click', e => {
+      addQueue.addMovies('queue', r.id)
+  })
 }
 
 

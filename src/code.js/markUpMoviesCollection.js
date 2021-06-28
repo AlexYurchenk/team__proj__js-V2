@@ -35,13 +35,14 @@ export default class markUpMoviesCollection {
 
     // отрисовывает фон, когда в списке нету фильмов
     showBackgroundWithoutCollection(name) {
-        const background = `<p class="bg__empty__collection">Sorry, but you haven't selected anything to ${name} yet</p>`;
+        const background = `<p class="bg__empty__collection">Sorry, but you haven't selected anything to ${name} yet<span class="bg__empty__collection bg__icon">ヽ(°□° )ノ</span></p>`;
         this.refs.container.insertAdjacentHTML('beforeend', background);
     }
 
     hideBackgroundWithoutCollection() {
         const background = document.querySelector('.bg__empty__collection');
         if (background === null) {
+            this.refs.paginationButtons.classList.add('visually-hidden')
             return
         }
         background.remove();
